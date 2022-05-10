@@ -1,0 +1,7 @@
+{
+    "version": "0.0-2135-gb534c1fe",
+    "url": "https://github.com/dalance/svls/releases/download/v0.2.1/svls-v0.2.1-x86_64-win.zip",
+
+    "bin": "\\target\\x86_64-pc-windows-msvc\\release\\svls.exe",
+    "hash": "8b4b2998d5551205d6bc75a0c1469323af3650951567145a6cddc7e4f222fc23"
+}
