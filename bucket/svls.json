@@ -1,9 +1,9 @@
 {
-    "version": "0.2.1",
+    "version": "0.2.3",
     "description": "SystemVerilog language server",
     "homepage": "https://github.com/dalance/svls",
     "license": "MIT",
-    "url": "https://github.com/dalance/svls/releases/download/v0.2.1/svls-v0.2.1-x86_64-win.zip",
+    "url": "https://github.com/dalance/svls/releases/download/v0.2.3/svls-v0.2.3-x86_64-win.zip",
     "bin": "\\target\\x86_64-pc-windows-msvc\\release\\svls.exe",
-    "hash": "8b4b2998d5551205d6bc75a0c1469323af3650951567145a6cddc7e4f222fc23"
+    "hash": "2af6767c0f00441ed700a23aaff53bd099411a73a3fba03bcc9e1d3bfecf01da"
 }
