@@ -1,0 +1,46 @@
+name: test
+on:
+  workflow_dispatch:
+    inputs: # <= 入力欄の定義
+      ref:
+        description: "ref"
+        required: false
+        default: ""
+
+
+jobs: 
+  test_pwsh:
+    name: checkversion
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Bucket
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          repository: motty-mio2/scoop_hdl
+          path: 'scoop_hdl'
+      - name: clone
+        shell: pwsh
+        run: git -C .\scoop_hdl\ checkout ${{ github.event.inputs.ref }}
+        if: ${{ github.event.inputs.ref != '' }}
+      - name: Checkout Scoop
+        uses: actions/checkout@main
+        with:
+          repository: ScoopInstaller/Scoop
+          path: 'scoop_core'
+      - name: check_version
+        shell: pwsh
+        run: |
+          $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
+          .\scoop_core\bin\checkver.ps1 -Dir .\scoop_hdl\
+      - name: echo
+        shell: pwsh
+        run: |
+          echo $steps.check_version.outputs
+       # PRがまだなかったらghコマンドで生成
+      - name: Create PR
+        if: ${{ steps.check_pr.outputs.count == '' }}
+        run: gh pr create --fill -B ${{ env.BASE_BRANCH }} -r ${{ env.REVIEWER }}i -t "[scoop][${name}] update from ${old_ver} to ${new_ver}"
+        env:
+          # github-actions[bot]のトークンを使って作成するために設定
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
