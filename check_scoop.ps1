@@ -43,8 +43,10 @@ Set-Location $repo
 foreach ($line in $output) {
     git checkout main
     $tmp = Select-String -InputObject $line -Pattern $pattern -AllMatches
-    $match = $tmp.Matches[0]
+    if ($tmp.Matches.Length) {
+        $match = $tmp.Matches[0]
 
-    create_pr -app_name $match.Groups["name"].Value -old_version $match.Groups["old_ver"].Value -new_version $match.Groups["new_ver"].Value -draft $true
+        create_pr -app_name $match.Groups["name"].Value -old_version $match.Groups["old_ver"].Value -new_version $match.Groups["new_ver"].Value -draft $true
+    }
 }
 
