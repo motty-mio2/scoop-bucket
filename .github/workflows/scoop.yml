@@ -8,13 +8,13 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout Bucket
-        uses: actions/checkout@v2
+        uses: actions/checkout
         with:
           fetch-depth: 0
           repository: motty-mio2/mio2_bucket
           path: "bucket"
       - name: Checkout Scoop
-        uses: actions/checkout@main
+        uses: actions/checkout
         with:
           repository: ScoopInstaller/Scoop
           path: "scoop_core"
