@@ -25,7 +25,7 @@ jobs:
       - name: check_version
         shell: pwsh
         run: |
-          . ~\bucket\check_scoop.ps1 -repo "~/bucket" -SCOOP_HOME "$(Convert-Path '.\scoop_core')"
+          . Resol "$(Convert-Path '.\bucket\check_scoop.ps1')" -repo "~/bucket" -SCOOP_HOME "$(Convert-Path '.\scoop_core')"
       #     $env:SCOOP_HOME=
       #     .\scoop_core\bin\checkver.ps1 -Dir .\scoop_hdl\
       # - name: echo
