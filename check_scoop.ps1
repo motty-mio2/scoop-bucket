@@ -19,7 +19,7 @@ function create_pr {
     if ( ! $branch_list.Contains( $branch) ) {
 
         git checkout -b $branch
-        powershell -noprofile -file $SCOOP_HOME/bin/checkver.ps1 -Dir $repo -App $app_name -u
+        powershell -noprofile -file "$(Convert-Path $SCOOP_HOME/bin/checkver.ps1)" -Dir $repo -App $app_name -u
 
         git commit -a -m "$pr_title"
         git push --set-upstream origin $branch
