@@ -43,9 +43,9 @@ Set-Location $repo
 foreach ($line in $output) {
     git checkout main
     $tmp = Select-String -InputObject $line -Pattern $pattern -AllMatches
-    Write-Output $tmp.Matches.Length
 
-    if ($tmp.Matches.Length > 0) {
+
+    if ($tmp.Matches.Length -gt 0) {
         Write-Output "in loop"
         $match = $tmp.Matches[0]
 
