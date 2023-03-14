@@ -1,6 +1,6 @@
 # svls: 0.2.7 (scoop version is 0.2.6) autoupdate available
 param(
-    [String] $repo = "~/bucket",
+    [String] $repo = "~/Projects/mio2_bucket",
     [String] $SCOOP_HOME = "~/scoop/apps/scoop/current"
 )
 
@@ -35,7 +35,8 @@ function create_pr {
     }
 }
 
-$output = powershell -noprofile -file $SCOOP_HOME/bin/checkver.ps1 -Dir $repo
+$output = powershell -noprofile -file "$(Convert-Path $SCOOP_HOME/bin/checkver.ps1)" -Dir $repo
+Write-Output $output
 
 Set-Location $repo
 
