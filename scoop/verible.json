@@ -17,7 +17,7 @@
         "\\verible-verilog-project.exe",
         "\\verible-verilog-syntax.exe"
     ],
-    "extract_dir": "verible-v0.0-3011-g56ec2f99-win64",
+    "extract_dir": "verible-v0.0-3061-gd8b23d29-win64",
     "hash": "5524342f666cfe514c4a4a388fdacf99fe89913908d8b1716404935f759d23b4",
     "checkver": {
         "url": "https://github.com/chipsalliance/verible/releases",
