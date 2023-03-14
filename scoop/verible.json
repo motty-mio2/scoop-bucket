@@ -18,7 +18,6 @@
         "\\verible-v0.0-3011-g56ec2f99-win64\\verible-verilog-syntax.exe"
     ],
     "extract_to": [
-        "",
         "bin"
     ],
     "hash": "6cd5c9416089ba6178992fcf7c2a39540456b05225f00be334cbaeea239bd026",
