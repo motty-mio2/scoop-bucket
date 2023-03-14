@@ -41,7 +41,6 @@ Write-Output $output
 Set-Location $repo
 
 foreach ($line in $output) {
-    git checkout main
     $tmp = Select-String -InputObject $line -Pattern $pattern -AllMatches
 
 
@@ -50,5 +49,5 @@ foreach ($line in $output) {
 
         create_pr -app_name $match.Groups["name"].Value -old_version $match.Groups["old_ver"].Value -new_version $match.Groups["new_ver"].Value -draft $true
     }
+    git checkout main
 }
-
