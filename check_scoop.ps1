@@ -46,6 +46,7 @@ foreach ($line in $output) {
     Write-Output $tmp.Matches.Length
 
     if ($tmp.Matches.Length > 0) {
+        Write-Output "in loop"
         $match = $tmp.Matches[0]
 
         create_pr -app_name $match.Groups["name"].Value -old_version $match.Groups["old_ver"].Value -new_version $match.Groups["new_ver"].Value -draft $true
