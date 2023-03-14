@@ -13,10 +13,6 @@ jobs:
           fetch-depth: 0
           repository: motty-mio2/mio2_bucket
           path: "bucket"
-      - name: clone
-        shell: pwsh
-        run: git -C .\scoop_hdl\ checkout ${{ github.event.inputs.ref }}
-        if: ${{ github.event.inputs.ref != '' }}
       - name: Checkout Scoop
         uses: actions/checkout@main
         with:
@@ -25,7 +21,7 @@ jobs:
       - name: check_version
         shell: pwsh
         run: |
-          . "$(Convert-Path '.\bucket\check_scoop.ps1')" -repo "~/bucket" -SCOOP_HOME "$(Convert-Path '.\scoop_core')"
+          . "$(Convert-Path '.\bucket\check_scoop.ps1')" -repo "$(Convert-Path '.\bucket')" -SCOOP_HOME "$(Convert-Path '.\scoop_core')"
       #     $env:SCOOP_HOME=
       #     .\scoop_core\bin\checkver.ps1 -Dir .\scoop_hdl\
       # - name: echo
