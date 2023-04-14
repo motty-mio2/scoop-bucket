@@ -59,7 +59,7 @@ foreach ($line in $output) {
     if ($tmp.Matches.Length -gt 0) {
         $match = $tmp.Matches[0]
 
-        create_pr -app_name $match.Groups["name"].Value -old_version $match.Groups["old_ver"].Value -new_version $match.Groups["new_ver"].Value -draft $true
+        create_pr -app_name $match.Groups["name"].Value -old_version $match.Groups["old_ver"].Value -new_version $match.Groups["new_ver"].Value
     }
     git checkout main
 }
