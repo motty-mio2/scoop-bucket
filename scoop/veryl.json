@@ -1,0 +1,16 @@
+{
+    "version": "0.5.5",
+    "description": "Veryl: A Modern Hardware Description Language",
+    "homepage": "https://github.com/dalance/veryl",
+    "license": "MIT",
+    "url": "https://github.com/dalance/veryl/releases/download/veryl-v0.5.5/veryl-x86_64-windows.zip",
+    "bin": [
+        "\\veryl.exe",
+        "\\veryl-ls.exe"
+    ],
+    "hash": "fae4de5da1dc5d3a34a91cca0cef775243cf30872bdfb9dadfafe7e63d01002a",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/dalance/veryl/releases/download/veryl-v0.5.5/veryl-x86_64-windows.zip"
+    }
+}
