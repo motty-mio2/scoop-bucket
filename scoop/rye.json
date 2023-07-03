@@ -8,6 +8,6 @@
     "hash": "6369ae43b433c22404fc4e4b2218c3b1c524567657d341270c5afd9b67352982",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/dalance/svlint/releases/download/$version/rye-x86_64-windows.exe"
+        "url": "https://github.com/mitsuhiko/rye/releases/download/$version/rye-x86_64-windows.exe"
     }
 }
