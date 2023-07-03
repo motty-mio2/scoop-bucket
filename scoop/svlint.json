@@ -1,11 +1,11 @@
 {
-    "version": "0.7.2",
+    "version": "0.8.0",
     "description": "SystemVerilog linter",
     "homepage": "https://github.com/dalance/svlint",
     "license": "MIT",
-    "url": "https://github.com/dalance/svlint/releases/download/v0.7.2/svlint-v0.7.2-x86_64-win.zip",
+    "url": "https://github.com/dalance/svlint/releases/download/v0.8.0/svlint-v0.8.0-x86_64-win.zip",
     "bin": "\\target\\x86_64-pc-windows-msvc\\release\\svlint.exe",
-    "hash": "1b98f58f2e2f19c17bdf9dd5ea84cab2c98df8d0d4e11a246eb6d56fa6b83dae",
+    "hash": "aa26253833e6929c1a9bfc81322eb0fd4d8870b32915d408dfb0e113f4605100",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/dalance/svlint/releases/download/v$version/svlint-v$version-x86_64-win.zip"
