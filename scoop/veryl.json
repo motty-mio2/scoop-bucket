@@ -9,8 +9,11 @@
         "\\veryl-ls.exe"
     ],
     "hash": "fae4de5da1dc5d3a34a91cca0cef775243cf30872bdfb9dadfafe7e63d01002a",
-    "checkver": "github",
+    "checkver": {
+        "url": "https://github.com/dalance/veryl/releases",
+        "re": "veryl-v([\\d.]+)"
+    },
     "autoupdate": {
-        "url": "https://github.com/dalance/veryl/releases/download/veryl-v0.5.5/veryl-x86_64-windows.zip"
+        "url": "https://github.com/dalance/veryl/releases/download/veryl-v$version/veryl-x86_64-windows.zip"
     }
 }
