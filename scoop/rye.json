@@ -1,9 +1,9 @@
 {
-    "version": "0.11.0",
+    "version": "0.13.0",
     "description": "An Experimental Package Management Solution for Python",
     "homepage": "https://github.com/mitsuhiko/rye",
     "license": "MIT",
-    "url": "https://github.com/mitsuhiko/rye/releases/download/0.11.0/rye-x86_64-windows.exe",
+    "url": "https://github.com/mitsuhiko/rye/releases/download/0.13.0/rye-x86_64-windows.exe",
     "bin": [
         "rye-x86_64-windows.exe",
         [
@@ -11,7 +11,7 @@
             "rye"
         ]
     ],
-    "hash": "12d3cb63eec70a767c8a96854828da3e0c9de1d64b7a957486c7a7b502bd7644",
+    "hash": "749a8caa46e834527af4527825e0d829dfe758486963e038f27b3c00c5a75641",
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/mitsuhiko/rye/releases/download/$version/rye-x86_64-windows.exe"
