@@ -1,6 +1,5 @@
-# svls: 0.2.7 (scoop version is 0.2.6) autoupdate available
 param(
-    [String] $repo = "~/Projects/mio2_bucket",
+    [String] $repo = $(Split-Path -Parent $MyInvocation.MyCommand.Definition).ToString(),
     [String] $SCOOP_HOME = "~/scoop/apps/scoop/current"
 )
 
@@ -46,6 +45,7 @@ function create_pr {
         git clean -f
     }
 }
+
 
 $output = powershell -noprofile -file "$(Convert-Path $SCOOP_HOME/bin/checkver.ps1)" -Dir $repo
 Write-Output $output
