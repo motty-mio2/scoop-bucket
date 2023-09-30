@@ -1,6 +1,7 @@
 name: check_update
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * 0"
 
 jobs:
   update:
@@ -22,16 +23,3 @@ jobs:
         shell: pwsh
         run: |
           . "$(Convert-Path '.\bucket\check_scoop.ps1')" -repo "$(Convert-Path '.\bucket')" -SCOOP_HOME "$(Convert-Path '.\scoop_core')"
-      #     $env:SCOOP_HOME=
-      #     .\scoop_core\bin\checkver.ps1 -Dir .\scoop_hdl\
-      # - name: echo
-      #   shell: pwsh
-      #   run: |
-      #     echo $steps.check_version.outputs
-      #   # PRがまだなかったらghコマンドで生成
-      # - name: Create PR
-      #   if: ${{ steps.check_pr.outputs.count == '' }}
-      #   run: gh pr create --fill -B ${{ env.BASE_BRANCH }} -r ${{ env.REVIEWER }}i -t "[scoop][${name}] update from ${old_ver} to ${new_ver}"
-      #   env:
-      #     # github-actions[bot]のトークンを使って作成するために設定
-      #     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
