@@ -26,3 +26,5 @@ jobs:
           git config --global user.email "motty.mio2@gmail.com"
           git config --global user.name "Github Actions"
           . "$(Convert-Path '.\bucket\check_scoop.ps1')" -repo "$(Convert-Path '.\bucket')" -SCOOP_HOME "$(Convert-Path '.\scoop_core')"
+        env:
+          GH_TOKEN: ${{ github.token }}
