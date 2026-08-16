@@ -1,9 +1,9 @@
 {
-    "version": "0.0-4133-g873f559f",
+    "version": "0.0-4141-g09a245fe",
     "description": "Verible is a suite of SystemVerilog developer tools, including a parser, style-linter, and formatter.",
     "homepage": "https://github.com/chipsalliance/verible",
     "license": "Apache-2.0",
-    "url": "https://github.com/chipsalliance/verible/releases/download/v0.0-4133-g873f559f/verible-v0.0-4133-g873f559f-win64.zip",
+    "url": "https://github.com/chipsalliance/verible/releases/download/v0.0-4141-g09a245fe/verible-v0.0-4141-g09a245fe-win64.zip",
     "bin": [
         "\\verible-patch-tool.exe",
         "\\verible-verilog-diff.exe",
@@ -17,8 +17,8 @@
         "\\verible-verilog-project.exe",
         "\\verible-verilog-syntax.exe"
     ],
-    "extract_dir": "verible-v0.0-4133-g873f559f-win64",
-    "hash": "2fda5403f69764fce44e1e8fe1b2ecb2adeeded75b1962be707f0b47ade00f56",
+    "extract_dir": "verible-v0.0-4141-g09a245fe-win64",
+    "hash": "5a1decf552fa2934acf597017dd9ea35108892e6fbca7e90e60958c59d535fa1",
     "checkver": {
         "url": "https://github.com/chipsalliance/verible/releases",
         "re": "v(?<version>[\\d]*\\.[\\d]*\\-[\\d]{4}\\-[\\da-zA-Z]*)"
